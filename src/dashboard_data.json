@@ -1,0 +1,310 @@
+{
+  "last_updated": "2025-12-18 21:07 UTC",
+  "stats": {
+    "novelty": 0.0,
+    "uniqueness": 60.3,
+    "total_generated": 1000
+  },
+  "hypotheses": [
+    {
+      "relation": "hasAuthor",
+      "entity": "Xianghong Xu 0001",
+      "score": "0.1155",
+      "novel": false
+    },
+    {
+      "relation": "hasAuthor",
+      "entity": "Arpad Rimmel",
+      "score": "0.0942",
+      "novel": false
+    },
+    {
+      "relation": "Authored Paper",
+      "entity": "Data-Driven Exact Pole Placement for Linear Systems.",
+      "score": "0.0984",
+      "novel": false
+    },
+    {
+      "relation": "Authored Paper",
+      "entity": "Medical Imaging Systems - An Introductory Guide",
+      "score": "0.1079",
+      "novel": false
+    },
+    {
+      "relation": "Venue:",
+      "entity": "Deductive Software Verification",
+      "score": "0.1226",
+      "novel": false
+    },
+    {
+      "relation": "Venue:",
+      "entity": "Advances on Superelliptic Curves and their Applications",
+      "score": "0.1179",
+      "novel": false
+    },
+    {
+      "relation": "Authored Paper",
+      "entity": "Probabilistic Cooperative Location Estimation in Wireless Networks.",
+      "score": "0.0833",
+      "novel": false
+    },
+    {
+      "relation": "Published in",
+      "entity": "1990",
+      "score": "0.0986",
+      "novel": false
+    },
+    {
+      "relation": "Published in",
+      "entity": "1982",
+      "score": "0.1023",
+      "novel": false
+    },
+    {
+      "relation": "Published in",
+      "entity": "1976",
+      "score": "0.1004",
+      "novel": false
+    },
+    {
+      "relation": "Venue:",
+      "entity": "INLG (Generation Challenges)",
+      "score": "0.1523",
+      "novel": false
+    },
+    {
+      "relation": "Published in",
+      "entity": "1976",
+      "score": "0.1054",
+      "novel": false
+    },
+    {
+      "relation": "Published in",
+      "entity": "1974",
+      "score": "0.1486",
+      "novel": false
+    },
+    {
+      "relation": "Published in",
+      "entity": "1964",
+      "score": "0.1197",
+      "novel": false
+    },
+    {
+      "relation": "Authored Paper",
+      "entity": "Estimating morphological parameters of Tamarix ramosissima by Digital hemispherical image in the lower reaches of heihe river, northwest China.",
+      "score": "0.0882",
+      "novel": false
+    },
+    {
+      "relation": "Authored Paper",
+      "entity": "Hierarchical Page Eviction Policy for Unified Memory in GPUs.",
+      "score": "0.0803",
+      "novel": false
+    },
+    {
+      "relation": "hasAuthor",
+      "entity": "Maria Valera",
+      "score": "0.0806",
+      "novel": false
+    },
+    {
+      "relation": "Authored Paper",
+      "entity": "Realistic 3D Face Modeling by Fusing Multiple 2D Images.",
+      "score": "0.1023",
+      "novel": false
+    },
+    {
+      "relation": "Authored Paper",
+      "entity": "OLAP, Spatial.",
+      "score": "0.0963",
+      "novel": false
+    },
+    {
+      "relation": "Published in",
+      "entity": "1974",
+      "score": "0.1376",
+      "novel": false
+    },
+    {
+      "relation": "hasAuthor",
+      "entity": "Shingo Ata",
+      "score": "0.0887",
+      "novel": false
+    },
+    {
+      "relation": "Venue:",
+      "entity": "Local Binary Patterns",
+      "score": "0.1550",
+      "novel": false
+    },
+    {
+      "relation": "Venue:",
+      "entity": "Intelligent Monitoring, Control, and Security of Critical Infrastructure Systems",
+      "score": "0.1241",
+      "novel": false
+    },
+    {
+      "relation": "Authored Paper",
+      "entity": "Practical Observer Design for Nonlinear Systems using Caputo Fractional Derivative with Respect to Another Function.",
+      "score": "0.0946",
+      "novel": false
+    },
+    {
+      "relation": "Venue:",
+      "entity": "Computational Intelligence and Efficiency in Engineering Systems",
+      "score": "0.1371",
+      "novel": false
+    },
+    {
+      "relation": "hasAuthor",
+      "entity": "Nohbyung Park",
+      "score": "0.0773",
+      "novel": false
+    },
+    {
+      "relation": "Venue:",
+      "entity": "Usable Security",
+      "score": "0.1847",
+      "novel": false
+    },
+    {
+      "relation": "hasAuthor",
+      "entity": "H\u00fcseyin Hacihabiboglu",
+      "score": "0.1134",
+      "novel": false
+    },
+    {
+      "relation": "Published in",
+      "entity": "1974",
+      "score": "0.0938",
+      "novel": false
+    },
+    {
+      "relation": "Published in",
+      "entity": "1967",
+      "score": "0.1020",
+      "novel": false
+    },
+    {
+      "relation": "hasAuthor",
+      "entity": "Justin J. Lee",
+      "score": "0.0954",
+      "novel": false
+    },
+    {
+      "relation": "Venue:",
+      "entity": "Anomaly Detection as a Service",
+      "score": "0.1127",
+      "novel": false
+    },
+    {
+      "relation": "Venue:",
+      "entity": "Search-Based Applications",
+      "score": "0.2238",
+      "novel": false
+    },
+    {
+      "relation": "hasAuthor",
+      "entity": "Peter J. Haas",
+      "score": "0.1634",
+      "novel": false
+    },
+    {
+      "relation": "Authored Paper",
+      "entity": "Active Acoustic Impedance Mapping Using Mobile Robots.",
+      "score": "0.0943",
+      "novel": false
+    },
+    {
+      "relation": "hasAuthor",
+      "entity": "Livio Belegante",
+      "score": "0.0652",
+      "novel": false
+    },
+    {
+      "relation": "hasAuthor",
+      "entity": "Michael Hess 0002",
+      "score": "0.0848",
+      "novel": false
+    },
+    {
+      "relation": "hasAuthor",
+      "entity": "Edward F. Smith",
+      "score": "0.0885",
+      "novel": false
+    },
+    {
+      "relation": "Published in",
+      "entity": "1970",
+      "score": "0.1020",
+      "novel": false
+    },
+    {
+      "relation": "Published in",
+      "entity": "1984",
+      "score": "0.1093",
+      "novel": false
+    },
+    {
+      "relation": "hasAuthor",
+      "entity": "Daizhan Lijun Zhang",
+      "score": "0.0832",
+      "novel": false
+    },
+    {
+      "relation": "Venue:",
+      "entity": "Web Accessibility (2nd Ed.)",
+      "score": "0.1130",
+      "novel": false
+    },
+    {
+      "relation": "Published in",
+      "entity": "1967",
+      "score": "0.1246",
+      "novel": false
+    },
+    {
+      "relation": "Venue:",
+      "entity": "Search-Based Applications",
+      "score": "0.1405",
+      "novel": false
+    },
+    {
+      "relation": "Authored Paper",
+      "entity": "Speckle statistics and long-term coherent SAR interferograms.",
+      "score": "0.0945",
+      "novel": false
+    },
+    {
+      "relation": "Authored Paper",
+      "entity": "SRes-NeRF: Improved Neural Radiance Fields for Realism and Accuracy of Specular Reflections.",
+      "score": "0.1181",
+      "novel": false
+    },
+    {
+      "relation": "Authored Paper",
+      "entity": "Detecting Irrigation Events Using Sentinel-1 Data.",
+      "score": "0.0833",
+      "novel": false
+    },
+    {
+      "relation": "hasAuthor",
+      "entity": "Jaroslaw Goslinski",
+      "score": "0.0972",
+      "novel": false
+    },
+    {
+      "relation": "Venue:",
+      "entity": "Usable Security",
+      "score": "0.1871",
+      "novel": false
+    },
+    {
+      "relation": "Authored Paper",
+      "entity": "Manifold Learning - Model Reduction in Engineering",
+      "score": "0.0881",
+      "novel": false
+    }
+  ]
+}

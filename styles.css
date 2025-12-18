@@ -1,0 +1,232 @@
+:root {
+    --text-primary: #000;
+    --text-secondary: #333;
+    --text-muted: #666;
+    --accent: #2e8b57;
+    --border: #000;
+    --bg-light: #fff;
+    --bg-card: #fff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: '__copernicus_669e4a', '__copernicus_Fallback_669e4a', Georgia, 'Times New Roman', serif;
+    background: white;
+    color: black;
+    line-height: 1.5;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px 40px;
+  }
+  
+  .header {
+    margin-bottom: 40px;
+    text-align: left;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    letter-spacing: 0;
+    color: var(--text-primary);
+  }
+  
+  .name-badge {
+    background: black;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 0;
+    font-size: 0.6em;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+  }
+  
+  .intro {
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--text-secondary);
+    max-width: 100%;
+    margin: 0;
+    text-align: justify;
+  }
+  
+  .last-updated {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .section {
+    margin-bottom: 60px;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    border-left: none;
+    padding-left: 0;
+  }
+  
+  .note-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+  }
+  
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    border-top: 2px solid var(--border);
+    border-bottom: 2px solid var(--border);
+    gap: 0;
+  }
+  
+  .metric-card {
+    background: transparent;
+    padding: 15px 10px;
+    border-radius: 0;
+    border: none;
+    border-right: 1px solid #eee;
+    text-align: left;
+  }
+  
+  .metric-card:last-child {
+    border-right: none;
+  }
+  
+  .metric-val {
+    font-family: 'Courier New', monospace;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+    margin-bottom: 5px;
+  }
+  
+  .metric-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--text-primary);
+    margin-top: 0;
+  }
+  
+  .metric-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 5px;
+    font-style: italic;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+    max-height: 600px;
+    overflow-y: auto;
+    border: none;
+    box-shadow: none;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    background: #fff;
+  }
+  
+  th,
+  td {
+    padding: 8px 10px;
+    text-align: left;
+    border: none;
+  }
+  
+  th {
+    background: white;
+    font-weight: 700;
+    color: var(--text-primary);
+    border-top: 2px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  td {
+    font-family: 'Courier New', monospace;
+    color: #333;
+    border-bottom: 1px solid #eee;
+  }
+  
+  tr:last-child td {
+    border-bottom: 2px solid var(--border);
+  }
+  
+  .novel-tag {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 1px 5px;
+    border-radius: 0;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border: 1px solid black;
+    text-transform: uppercase;
+    font-family: sans-serif;
+  }
+  
+  .chart-container {
+    background: white;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .chart-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  a:hover {
+    color: var(--accent);
+  }
+  
+  @media (max-width: 600px) {
+    body {
+      padding: 20px 15px;
+    }
+    .metrics-grid {
+      grid-template-columns: 1fr;
+      border: none;
+    }
+    .metric-card {
+      border-right: none;
+      border-bottom: 1px solid #eee;
+      padding: 15px 0;
+    }
+  }

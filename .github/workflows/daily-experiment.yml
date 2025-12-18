@@ -1,0 +1,59 @@
+name: Daily Semantic GAN Training
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  train-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Train GAN model
+        run: |
+          python scripts/train_gan.py
+
+      - name: Evaluate generation metrics
+        run: |
+          python scripts/evaluate_gan.py
+
+      - name: Plot training curves
+        run: |
+          python scripts/plot_training.py
+
+      - name: Update dashboard data
+        run: |
+          python scripts/update_dashboard.py
+
+      - name: Persist model artifacts and website files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+
+          git add checkpoints/gan_latest.pth
+          git add data/synthetic/*.txt
+          git add data/processed/training_log.csv
+          git add src/dashboard_data.json
+          git add src/loss_curve.png
+
+          git commit -m "Scheduled GAN training and dashboard update" || echo "No changes to commit"
+          git push
