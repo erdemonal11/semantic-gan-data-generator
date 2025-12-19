@@ -125,11 +125,18 @@ def train():
         "year": [i for i, e in enumerate(dataset.entity_list) if e.startswith("year_")]
     }
     
-    relation_rules = {
+    relation_tail_rules = {
         "dblp:wrote": "pub",
         "dblp:hasAuthor": "author",
         "dblp:publishedIn": "venue",
         "dblp:inYear": "year"
+    }
+
+    relation_head_rules = {
+        "dblp:wrote": "author",
+        "dblp:hasAuthor": "pub",
+        "dblp:publishedIn": "pub",
+        "dblp:inYear": "pub"
     }
     
     all_ent_emb = D.ent_embedding.weight.data
@@ -142,33 +149,38 @@ def train():
         fake_emb = G(noise, test_r)
         
         with open(output_file, "w") as f:
-            f.write("RELATION_ID\tGENERATED_TAIL_ID\tDISTANCE_SCORE\n")
+            f.write("HEAD_ID\tRELATION_ID\tGENERATED_TAIL_ID\tDISTANCE_SCORE\n")
             
             for k in range(num_samples):
                 r_str = dataset.relation_list[test_r[k].item()]
-                target_type = relation_rules.get(r_str, "pub")
-                valid_indices = type_indices.get(target_type, [])
-                if not valid_indices: valid_indices = list(range(len(dataset.entity_list)))
 
-                valid_indices_tensor = torch.tensor(valid_indices, device=device)
-                candidate_embeddings = all_ent_emb[valid_indices_tensor]
+                head_type = relation_head_rules.get(r_str, "author")
+                head_candidates = type_indices.get(head_type, list(range(len(dataset.entity_list))))
+                head_candidates_tensor = torch.tensor(head_candidates, device=device)
+                head_choice = torch.randint(0, len(head_candidates_tensor), (1,)).item()
+                h_idx = head_candidates[head_choice]
+                h_str = dataset.entity_list[h_idx]
+
+                tail_type = relation_tail_rules.get(r_str, "pub")
+                tail_candidates = type_indices.get(tail_type, list(range(len(dataset.entity_list))))
+                tail_candidates_tensor = torch.tensor(tail_candidates, device=device)
+                candidate_embeddings = all_ent_emb[tail_candidates_tensor]
                 
                 current_emb = fake_emb[k].unsqueeze(0)
                 dist = torch.norm(candidate_embeddings - current_emb, dim=1)
-                
 
-                K = min(10, len(dist))
+                K = min(50, len(dist))  
                 top_dists, top_indices = torch.topk(dist, k=K, largest=False)
-                
 
-                rand_choice = torch.randint(0, K, (1,)).item()
-                
+                min_skip = min(5, K - 1)
+                rand_choice = torch.randint(min_skip, K, (1,)).item()
+
                 best_local_idx = top_indices[rand_choice].item()
-                best_global_idx = valid_indices[best_local_idx]
-                
+                best_global_idx = tail_candidates[best_local_idx]
+
                 t_str = dataset.entity_list[best_global_idx]
                 score = top_dists[rand_choice].item()
-                f.write(f"{r_str}\t{t_str}\t{score:.4f}\n")
+                f.write(f"{h_str}\t{r_str}\t{t_str}\t{score:.4f}\n")
 
     torch.save({
         'G_state': G.state_dict(),

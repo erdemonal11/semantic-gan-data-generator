@@ -38,8 +38,26 @@
           
           <div class="metric-card">
             <div class="metric-val" id="uniqueScore">--%</div>
-            <div class="metric-label">Diversity Score</div>
-            <div class="metric-sub">Distinct generated relations</div>
+            <div class="metric-label">Uniqueness Score</div>
+            <div class="metric-sub">Distinct generated triples</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-val" id="overlapScore">--%</div>
+            <div class="metric-label">Train Overlap</div>
+            <div class="metric-sub">Exact matches with training triples</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-val" id="relDiversity">--%</div>
+            <div class="metric-label">Relation Diversity</div>
+            <div class="metric-sub">Used relation types vs schema</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-val" id="avgDistance">--</div>
+            <div class="metric-label">Avg Distance</div>
+            <div class="metric-sub">Mean generator distance score</div>
           </div>
           
           <div class="metric-card">
@@ -108,6 +126,18 @@
             data.stats.novelty + "%";
           document.getElementById('uniqueScore').innerText =
             data.stats.uniqueness + "%";
+          if (data.stats.train_overlap !== undefined) {
+            document.getElementById('overlapScore').innerText =
+              data.stats.train_overlap + "%";
+          }
+          if (data.stats.relation_diversity !== undefined) {
+            document.getElementById('relDiversity').innerText =
+              data.stats.relation_diversity + "%";
+          }
+          if (data.stats.avg_distance !== undefined) {
+            document.getElementById('avgDistance').innerText =
+              data.stats.avg_distance;
+          }
           document.getElementById('totalGen').innerText =
             data.stats.total_generated;
 

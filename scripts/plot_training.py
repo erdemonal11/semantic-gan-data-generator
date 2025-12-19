@@ -13,10 +13,8 @@ def clean_and_plot():
     try:
  
         df = pd.read_csv(LOG_FILE)
-        
 
-        df_clean = df.tail(20) 
-        
+        df_clean = df.tail(20).sort_values("Epoch")
 
         df_clean.to_csv(LOG_FILE, index=False)
         print("Log data cleaned for the latest run.")
