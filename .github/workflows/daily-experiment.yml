@@ -36,14 +36,12 @@ jobs:
           pip install -r requirements.txt
           pip install huggingface_hub
 
-      - name: Download and Prepare DBLP Data
+      - name: Download Data from Hugging Face
         run: |
-          mkdir -p data/real
           mkdir -p data/processed
-          wget https://dblp.org/xml/dblp.xml.gz -O data/real/dblp.xml.gz
-          wget https://dblp.org/xml/dblp.dtd -O data/real/dblp.dtd
-          gunzip data/real/dblp.xml.gz
-          python scripts/prepare_dblp_kg.py
+          echo "Downloading pre-processed data from Hugging Face..."
+          python -c "from huggingface_hub import hf_hub_download; hf_hub_download(repo_id='erdemonal/SemanticGAN', filename='kg_triples_ids.txt', local_dir='data/processed/'); hf_hub_download(repo_id='erdemonal/SemanticGAN', filename='kg_mappings.json', local_dir='data/processed/')"
+          ls -lh data/processed/
 
       - name: Download Model from Hugging Face
         continue-on-error: true
@@ -66,7 +64,7 @@ jobs:
       - name: Update dashboard data
         run: python scripts/update_dashboard.py
 
-      - name: Push Model and Data to Hugging Face
+      - name: Push Model to Hugging Face
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
@@ -76,14 +74,11 @@ jobs:
           token = '${{ secrets.HF_TOKEN }}'
           repo_id = 'erdemonal/SemanticGAN'
           try:
+              print('Uploading updated model...')
               api.upload_file(path_or_fileobj='checkpoints/gan_latest.pth', path_in_repo='gan_latest.pth', repo_id=repo_id, token=token)
+              print('Success!')
           except Exception as e:
               print(f'Model upload warning: {e}')
-          try:
-              api.upload_file(path_or_fileobj='data/processed/kg_triples_ids.txt', path_in_repo='kg_triples_ids.txt', repo_id=repo_id, token=token)
-              api.upload_file(path_or_fileobj='data/processed/kg_mappings.json', path_in_repo='kg_mappings.json', repo_id=repo_id, token=token)
-          except Exception as e:
-              print(f'Data upload warning: {e}')
           "
 
       - name: Persist website files to GitHub

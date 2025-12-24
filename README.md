@@ -31,13 +31,15 @@ The WGAN model consists of a Generator that produces tail entity embeddings from
 
 The continuous learning pipeline runs via GitHub Actions in `.github/workflows/daily-experiment.yml`. The workflow loads the latest checkpoint, updates the model with new data when available, computes evaluation metrics, and updates the dashboard.
 
+## Model Storage and Versioning
+
+Model checkpoints and processed knowledge graph files are kept on the Hugging Face Hub at https://huggingface.co/erdemonal/SemanticGAN.
+
+Each daily training run loads the latest checkpoint from there and writes back the updated model state after training. The repository is used only as persistent storage for the continuous learning workflow.
+
 ## Repository Structure
 
 Technical report in `paper/`, preprocessing scripts in `scripts/`, model code in `src/`, data in `data/`, checkpoints in `checkpoints/`, dashboard files in `index.html`.
-
-## Experimental Results
-
-Experiments on the DBLP dataset show stable Wasserstein loss behavior during training. Generated triples span all relation types and include plausible author venue associations not present in the training set. Detailed metrics are available on the training dashboard.
 
 ## Data Availability
 

@@ -22,7 +22,7 @@ CHECKPOINT_PATH = CHECKPOINT_DIR / "gan_latest.pth"
 LOG_FILE = Path("data/processed/training_log.csv")
 
 EMBEDDING_DIM = 128  
-BATCH_SIZE = 2048   
+BATCH_SIZE = 4096   
 HIDDEN_DIM = 256
 MAX_EPOCHS = 1000
 EPOCHS_PER_RUN = 1
