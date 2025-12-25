@@ -1,16 +1,16 @@
 {
-  "last_updated": "2025-12-25 00:54 UTC",
+  "last_updated": "2025-12-25 06:15 UTC",
   "training_status": {
-    "epoch": 2,
-    "d_loss": -0.0064,
-    "g_loss": -0.0042
+    "epoch": 3,
+    "d_loss": -0.0055,
+    "g_loss": -0.0048
   },
   "stats": {
     "novelty": 100.0,
     "train_overlap": 0.0,
-    "uniqueness": 100.0,
+    "uniqueness": 99.9,
     "relation_diversity": 100.0,
-    "avg_distance": 0.3766,
+    "avg_distance": 0.3391,
     "schema_validity": 0.0,
     "total_generated": 1000,
     "total_knowledge_base": 4063535
@@ -18,394 +18,394 @@
   "relation_freq": [
     {
       "relation": "dblp:hasAuthor",
-      "count": 129,
-      "percent": 12.9
+      "count": 126,
+      "percent": 12.6
     },
     {
       "relation": "dblp:hasDOI",
-      "count": 136,
-      "percent": 13.6
+      "count": 124,
+      "percent": 12.4
     },
     {
       "relation": "dblp:hasLink",
-      "count": 113,
-      "percent": 11.3
+      "count": 124,
+      "percent": 12.4
     },
     {
       "relation": "dblp:inYear",
-      "count": 123,
-      "percent": 12.3
+      "count": 112,
+      "percent": 11.2
     },
     {
       "relation": "dblp:paperType",
-      "count": 117,
-      "percent": 11.7
+      "count": 128,
+      "percent": 12.8
     },
     {
       "relation": "dblp:partOf",
-      "count": 118,
-      "percent": 11.8
+      "count": 135,
+      "percent": 13.5
     },
     {
       "relation": "dblp:publishedIn",
-      "count": 133,
-      "percent": 13.3
+      "count": 122,
+      "percent": 12.2
     },
     {
       "relation": "dblp:wrote",
-      "count": 131,
-      "percent": 13.1
+      "count": 129,
+      "percent": 12.9
     }
   ],
   "hypotheses": [
     {
       "head": "generated_context",
-      "relation": "inYear",
-      "tail": "Zarook Shareefdeen",
-      "score": "0.2788",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "hasLink",
-      "tail": "Hierarchical Long-Short Transformer for Group Activity Recognition.",
-      "score": "0.2605",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
       "relation": "hasDOI",
-      "tail": "10.1109/KSE.2016.7758042",
-      "score": "0.8112",
+      "tail": "An Optimal and Lightweight Convolutional Neural Network for Performance Evaluation in Smart Cities based on CAPTCHA Solving.",
+      "score": "0.7137",
       "is_novel": true
     },
     {
       "head": "generated_context",
-      "relation": "wrote",
-      "tail": "10.1109/MASS66014.2025.00053",
-      "score": "0.2187",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "inYear",
-      "tail": "10.1109/ICL.2015.7318047",
-      "score": "0.2990",
+      "relation": "partOf",
+      "tail": "https://doi.org/10.1609/aaai.v39i28.35272",
+      "score": "0.4951",
       "is_novel": true
     },
     {
       "head": "generated_context",
       "relation": "publishedIn",
-      "tail": "10.1145/3617072.3617109",
-      "score": "0.3411",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "partOf",
-      "tail": "Rolf H. M\u00f6hring",
-      "score": "0.6692",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "paperType",
-      "tail": "10.1007/978-3-030-99200-2_32",
-      "score": "0.3535",
+      "tail": "First Demonstration of 512-Color Shift Keying Signal Demodulation Using Neural Equalization for Optical Camera Communication.",
+      "score": "0.3310",
       "is_novel": true
     },
     {
       "head": "generated_context",
       "relation": "hasLink",
-      "tail": "Cagatay Catal",
-      "score": "0.3227",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "wrote",
-      "tail": "https://proceedings.mlr.press/v270/zhou25b.html",
-      "score": "0.2221",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "inYear",
-      "tail": "Faranak Zagia",
-      "score": "0.3346",
+      "tail": "Areti Stringa",
+      "score": "0.2060",
       "is_novel": true
     },
     {
       "head": "generated_context",
       "relation": "hasDOI",
-      "tail": "10.1609/aaai.v36i11.21737",
-      "score": "0.7674",
+      "tail": "One-Stage Training Generative Paradigm for Generalized Zero-Shot Learning.",
+      "score": "0.6187",
       "is_novel": true
     },
     {
       "head": "generated_context",
-      "relation": "hasDOI",
-      "tail": "10.1109/INFOCOMWKSHPS51825.2021.9484595",
-      "score": "0.6832",
+      "relation": "hasAuthor",
+      "tail": "Tsetsentsengel Munkhbayar",
+      "score": "0.1890",
       "is_novel": true
     },
     {
       "head": "generated_context",
       "relation": "partOf",
-      "tail": "https://doi.org/10.1007/978-3-031-77792-9_6",
+      "tail": "William Washington",
+      "score": "0.4612",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "partOf",
+      "tail": "https://doi.org/10.1109/IEEECONF60004.2024.10943083",
+      "score": "0.4723",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "hasAuthor",
+      "tail": "Designing Dynamic and Adaptive MPI Point-to-Point Communication Protocols for Efficient Overlap of Computation and Communication.",
+      "score": "0.1884",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "paperType",
+      "tail": "https://doi.org/10.1109/ICC45855.2022.9838516",
+      "score": "0.3593",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "publishedIn",
+      "tail": "Children on ChatGPT Readability in an Educational Context: Myth or Opportunity?",
+      "score": "0.2617",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "hasDOI",
+      "tail": "Development and Optimization of Wireless Indoor Localization Error Modelling.",
+      "score": "0.6366",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "wrote",
+      "tail": "10.1109/WCNC61545.2025.10978809",
+      "score": "0.2211",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "wrote",
+      "tail": "https://doi.org/10.1007/978-3-031-16210-7_35",
+      "score": "0.2606",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "hasDOI",
+      "tail": "10.1007/978-3-030-34113-8_51",
+      "score": "0.7342",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "wrote",
+      "tail": "An Attention Enhanced Graph Convolutional Network for Semantic Segmentation.",
+      "score": "0.2397",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "hasDOI",
+      "tail": "10.1007/978-3-031-97554-7_14",
+      "score": "0.6173",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "partOf",
+      "tail": "RESAR: Reliable Storage at Exabyte Scale.",
+      "score": "0.3849",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "publishedIn",
+      "tail": "Decision Support Dashboard for Traffic and Environment Analysis of a Smart City.",
+      "score": "0.2978",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "partOf",
+      "tail": "10.1109/VTCFall.2016.7881203",
+      "score": "0.4035",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "wrote",
+      "tail": "10.1109/SLT54892.2023.10022676",
+      "score": "0.2313",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "hasLink",
+      "tail": "10.1109/DeSE.2019.00108",
+      "score": "0.2437",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "hasAuthor",
+      "tail": "A survey of 5G network systems: trends and Deep Learning approaches.",
+      "score": "0.1608",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "hasLink",
+      "tail": "Christian Di Maio",
+      "score": "0.2723",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "hasAuthor",
+      "tail": "Acoustic Scene Classification Using Reduced MobileNet Architecture.",
+      "score": "0.1997",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "partOf",
+      "tail": "https://doi.org/10.1109/BigDataService49289.2020.00028",
+      "score": "0.4183",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "hasDOI",
+      "tail": "10.1109/ICM60448.2023.10378909",
+      "score": "0.6368",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "paperType",
+      "tail": "Fran\u00e7ois Beaudeau",
+      "score": "0.3126",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "inYear",
+      "tail": "https://repository.isls.org/handle/1/4547",
+      "score": "0.2868",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "hasAuthor",
+      "tail": "Dynamic Adaptation of IP Virtual Network Topologies over Multi-Granular (Wavelength and Waveband) Optical Networks Supported by ETSI TeraFlowSDN multi-layer Control.",
+      "score": "0.2491",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "hasLink",
+      "tail": "Challenging the State-of-the-art Machine Translation Metrics from a Linguistic Perspective.",
+      "score": "0.2644",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "wrote",
+      "tail": "Marthe Lagarrigue-Charbonnier",
+      "score": "0.2158",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "inYear",
+      "tail": "Wan Salwina Wan Ismail",
+      "score": "0.2615",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "wrote",
+      "tail": "https://doi.org/10.1109/ICCCNT56998.2023.10306581",
+      "score": "0.2382",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "hasLink",
+      "tail": "10.1007/978-3-031-19958-5_32",
+      "score": "0.3527",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "paperType",
+      "tail": "https://aisel.aisnet.org/pacis2023/42",
+      "score": "0.3572",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "inYear",
+      "tail": "Usman Ahmad 0002",
+      "score": "0.3254",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "hasAuthor",
+      "tail": "10.1109/ICCCNT56998.2023.10306985",
+      "score": "0.2106",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "partOf",
+      "tail": "https://doi.org/10.1007/978-3-031-14926-9_1",
+      "score": "0.3817",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "hasAuthor",
+      "tail": "https://doi.org/10.1109/INFOCOM.2019.8737503",
+      "score": "0.2762",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "wrote",
+      "tail": "Ilia P. Nikolaev",
+      "score": "0.1957",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "partOf",
+      "tail": "10.1109/VLSID.2016.32",
+      "score": "0.4822",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "paperType",
+      "tail": "Arhana Chattopadhyay",
+      "score": "0.3264",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "hasDOI",
+      "tail": "https://doi.org/10.1109/ICC.2016.7511413",
       "score": "0.6912",
       "is_novel": true
     },
     {
       "head": "generated_context",
-      "relation": "hasDOI",
-      "tail": "10.1109/EMBC46164.2021.9630204",
-      "score": "0.7506",
+      "relation": "wrote",
+      "tail": "Harnessing Adversarial Distances to Discover High-Confidence Errors.",
+      "score": "0.1987",
+      "is_novel": true
+    },
+    {
+      "head": "generated_context",
+      "relation": "wrote",
+      "tail": "10.1109/ISGTEurope.2016.7856180",
+      "score": "0.2560",
       "is_novel": true
     },
     {
       "head": "generated_context",
       "relation": "hasDOI",
-      "tail": "https://doi.org/10.1109/ICIP49359.2023.10222383",
-      "score": "0.7236",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "inYear",
-      "tail": "Detecting Gender Stereotypes: Lexicon vs. Supervised Learning Methods.",
-      "score": "0.2708",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "inYear",
-      "tail": "https://doi.org/10.1109/IoTDI49375.2020.00031",
-      "score": "0.3121",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "inYear",
-      "tail": "https://doi.org/10.1109/WCNC61545.2025.10978796",
-      "score": "0.3167",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "hasDOI",
-      "tail": "Oswaldo Ter\u00e1n",
-      "score": "0.7599",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "partOf",
-      "tail": "10.1109/DSAA53316.2021.9564174",
-      "score": "0.7132",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "hasAuthor",
-      "tail": "Blaming Humans and Machines: What Shapes People's Reactions to Algorithmic Harm.",
-      "score": "0.2588",
+      "tail": "Object detection and colour evaluation of multicoloured waste textiles using machine vision.",
+      "score": "0.7314",
       "is_novel": true
     },
     {
       "head": "generated_context",
       "relation": "paperType",
-      "tail": "GDPR Compliance in Cybersecurity Software: A Case Study of DPIA in Information Sharing Platform.",
-      "score": "0.2744",
+      "tail": "Amir Ziaee",
+      "score": "0.3848",
       "is_novel": true
     },
     {
       "head": "generated_context",
       "relation": "hasLink",
-      "tail": "10.1109/ICDMW.2017.35",
-      "score": "0.2856",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "partOf",
-      "tail": "10.1109/Cybermatics_2018.2018.00183",
-      "score": "0.6756",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "hasDOI",
-      "tail": "https://doi.org/10.1145/3064663.3064683",
-      "score": "0.6950",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "paperType",
-      "tail": "10.23919/DATE54114.2022.9774579",
-      "score": "0.2981",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "paperType",
-      "tail": "https://doi.org/10.1007/978-3-319-52289-0_19",
-      "score": "0.2385",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "partOf",
-      "tail": "Dimitris Stratoulias",
-      "score": "0.5307",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "wrote",
-      "tail": "Divya Muthukumaran",
-      "score": "0.1805",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "hasDOI",
-      "tail": "10.1007/978-3-030-24766-9_16",
-      "score": "0.8200",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "publishedIn",
-      "tail": "Jonathan Blake",
-      "score": "0.2938",
+      "tail": "conf/pkdd/2022mlsa",
+      "score": "0.3127",
       "is_novel": true
     },
     {
       "head": "generated_context",
       "relation": "hasAuthor",
-      "tail": "Proceedings of the 4th Joint Workshop on Interfaces and Human Decision Making for Recommender Systems co-located with ACM Conference on Recommender Systems (RecSys 2017), Como, Italy, August 27, 2017.",
-      "score": "0.2215",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "paperType",
-      "tail": "https://doi.org/10.1007/978-3-319-19369-4_14",
-      "score": "0.2902",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "wrote",
-      "tail": "10.1007/978-3-319-21978-3_17",
-      "score": "0.3104",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "inYear",
-      "tail": "Step\u00e1n Pap\u00e1cek",
-      "score": "0.2528",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "publishedIn",
-      "tail": "Michel Duprez",
-      "score": "0.2860",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "hasAuthor",
-      "tail": "Frame Attention Recurrent Back-Projection Network for Accurate Video Super-Resolution.",
-      "score": "0.1658",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "wrote",
-      "tail": "A Method to Improve the Accuracy of the Bioelectrical Impedance Phase-Angle Measuring System.",
-      "score": "0.2345",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "hasAuthor",
-      "tail": "https://dl.gi.de/handle/20.500.12116/14959",
-      "score": "0.2361",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "wrote",
-      "tail": "Prediction of Multiple Sclerosis Patient Disability from Structural Connectivity using Convolutional Neural Networks.",
-      "score": "0.2055",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "inYear",
-      "tail": "Krzysztof Nowacki",
-      "score": "0.3345",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "hasDOI",
-      "tail": "A Graph-Theoretic Approach to the Train Marshalling Problem.",
-      "score": "0.8426",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "publishedIn",
-      "tail": "https://doi.org/10.1145/3610978.3640667",
-      "score": "0.2983",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "hasLink",
-      "tail": "https://doi.org/10.1109/ICCI-CC.2017.8109797",
-      "score": "0.2539",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "hasDOI",
-      "tail": "Xingcan Cao",
-      "score": "0.6893",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "wrote",
-      "tail": "Challenge for Consolidation of Individual Email Services into a Cloud Service.",
-      "score": "0.2136",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "hasLink",
-      "tail": "https://doi.org/10.1145/3644815.3644962",
-      "score": "0.2099",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "hasDOI",
-      "tail": "https://doi.org/10.1007/978-3-030-85874-2_2",
-      "score": "0.7628",
-      "is_novel": true
-    },
-    {
-      "head": "generated_context",
-      "relation": "hasLink",
-      "tail": "Riya Ashit Raja",
-      "score": "0.2366",
+      "tail": "10.1145/2818143",
+      "score": "0.2082",
       "is_novel": true
     }
   ]
