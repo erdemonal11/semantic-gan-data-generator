@@ -53,6 +53,12 @@ jobs:
           hf_hub_download(repo_id='erdemonal/SemanticGAN-Dataset', filename='kg_mappings.json', local_dir='data/processed/', repo_type='dataset')
           hf_hub_download(repo_id='erdemonal/SemanticGAN', filename='training_log.csv', local_dir='data/processed/')
           hf_hub_download(repo_id='erdemonal/SemanticGAN', filename='generated.txt', local_dir='data/synthetic/')
+          
+          try:
+              hf_hub_download(repo_id='erdemonal/SemanticGAN', filename='semantic_map.html', local_dir='.')
+              print('Map downloaded successfully.')
+          except Exception as e:
+              print(f'Map download failed: {e}')
           "
           python scripts/update_dashboard.py
           python scripts/plot_training.py || true
@@ -62,6 +68,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add dashboard_data.json data/processed/loss_curve.png
+          git add dashboard_data.json data/processed/loss_curve.png semantic_map.html
           git commit -m "dashboard auto-update [skip ci]" || exit 0
           git push

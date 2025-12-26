@@ -188,14 +188,7 @@
               <td>${h.head}</td>
               <td>${h.relation}</td>
               <td>${h.tail}</td>
-              <td>
-                <div class="conf-wrapper">
-                  <span class="mono">${h.score}</span>
-                  <div class="conf-bar">
-                    <div class="conf-fill" style="width: ${normalized}%; background: ${barColor};"></div>
-                  </div>
-                </div>
-              </td>
+              <td><span class="mono">${h.score}</span></td>
               <td><span class="status-tag ${statusClass}">${h.status}</span></td>
             `;
             tbody.appendChild(tr);

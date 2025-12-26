@@ -46,7 +46,7 @@ def clean_and_plot():
         
         plt.title("GAN Training Convergence", fontsize=14, pad=15)
         
-        plt.legend(frameon=True, loc='upper right', fontsize=10)
+        plt.legend(frameon=True, loc='lower center', bbox_to_anchor=(0.5, -0.12), ncol=2, fontsize=10)
         plt.grid(True, which='both', linestyle=':', alpha=0.4)
         
         plt.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
