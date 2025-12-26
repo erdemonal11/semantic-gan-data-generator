@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: '__copernicus_669e4a','__copernicus_Fallback_669e4a',Georgia,'Times New Roman',serif;
   background: #fff;
   color: #000;
   line-height: 1.5;
@@ -128,32 +128,33 @@ h2 {
 .kg-table {
   width: 100%;
   border-collapse: collapse;
-  background: #121212;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #fff;
+  font-family: '__copernicus_669e4a','__copernicus_Fallback_669e4a',Georgia,'Times New Roman',serif;
 }
 
 .kg-table th {
-  background: #1a1a1a;
-  color: #999;
+  background: #fff;
+  color: var(--text-primary);
   text-transform: uppercase;
   font-size: 11px;
   letter-spacing: 1px;
-  padding: 15px;
+  padding: 12px 8px;
   text-align: left;
-  border-bottom: 2px solid #333;
-  font-weight: 600;
+  border-top: 2px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-weight: 700;
 }
 
 .kg-table td {
-  padding: 14px;
-  border-bottom: 1px solid #222;
-  color: #e0e0e0;
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+  color: var(--text-primary);
   font-size: 13px;
 }
 
 .kg-table td:nth-child(2) {
-  font-family: 'Fira Code', 'Courier New', monospace;
-  color: #4fc3f7;
+  font-family: "Courier New", monospace;
+  color: var(--accent);
   font-size: 12px;
 }
 
@@ -166,7 +167,7 @@ h2 {
 .conf-bar {
   height: 4px;
   width: 40px;
-  background: #333;
+  background: #eee;
   border-radius: 2px;
   overflow: hidden;
 }
@@ -187,15 +188,15 @@ h2 {
 }
 
 .status-verified {
-  background: rgba(0, 200, 83, 0.1);
-  color: #00c853;
-  border: 1px solid #00c853;
+  background: rgba(46, 139, 87, 0.1);
+  color: var(--accent);
+  border: 1px solid var(--accent);
 }
 
 .status-match {
-  background: rgba(255, 171, 0, 0.1);
-  color: #ffab00;
-  border: 1px solid #ffab00;
+  background: rgba(255, 200, 0, 0.1);
+  color: #cc8800;
+  border: 1px solid #cc8800;
 }
 
 .table-loading {

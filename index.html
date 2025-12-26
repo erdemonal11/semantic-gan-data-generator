@@ -103,7 +103,7 @@
                 <th>Predicate</th>
                 <th>Object</th>
                 <th>Score</th>
-                <th>Ontology Check</th>
+                <th>Ontology</th>
               </tr>
             </thead>
             <tbody id="hypothesesTable">
@@ -183,7 +183,7 @@
             
             const scoreVal = parseFloat(h.score);
             const normalized = Math.min(100, Math.max(0, (scoreVal + 0.5) * 100));
-            const barColor = scoreVal > 0 ? "#00c853" : "#ffab00";
+            const barColor = scoreVal > 0 ? "#2e8b57" : "#cc8800";
             const statusClass = h.status === "Verified" ? "status-verified" : "status-match";
 
             tr.innerHTML = `
