@@ -36,7 +36,7 @@ Model weights and processed knowledge graph artifacts are hosted on the Hugging 
 
 Model Hub: [erdemonal/SemanticGAN](https://huggingface.co/erdemonal/SemanticGAN) stores the persistent WGAN checkpoints.
 
-Dataset Hub: [erdemonal/SemanticGAN-Dataset](https://huggingface.co/erdemonal/SemanticGAN-Dataset) contains the processed DBLP triples and ID mappings.
+Dataset Hub: [erdemonal/SemanticGAN-Dataset](https://huggingface.co/datasets/erdemonal/SemanticGAN-Dataset) contains the processed DBLP triples and ID mappings.
 
 The automated training workflow fetches processed data from the Dataset Hub and restores model states from the Model Hub before each training run.
 
