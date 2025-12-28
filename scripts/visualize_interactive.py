@@ -5,7 +5,7 @@ import plotly.express as px
 from pathlib import Path
 import os
 import sys
-from sklearn.decomposition import PCA
+from sklearn.manifold import TSNE
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
@@ -15,33 +15,26 @@ CHECKPOINT_PATH = Path(parent_dir) / "checkpoints/gan_latest.pth"
 MAPPINGS_FILE = Path(parent_dir) / "data/processed/kg_mappings.json"
 OUTPUT_HTML = Path(parent_dir) / "semantic_map.html"
 
-MAX_NODES = 500 
+MAX_NODES = 1000
 
 def create_interactive_map():
     if not CHECKPOINT_PATH.exists():
-        print(f"Error: {CHECKPOINT_PATH} not found.")
         return
 
-    print("Loading mappings...")
     with open(MAPPINGS_FILE, "r") as f:
         data = json.load(f)
         id_to_str = data.get("id2ent", {})
 
-    print("Loading model checkpoint...")
     checkpoint = torch.load(CHECKPOINT_PATH, map_location="cpu", weights_only=False)
     if "D_state" in checkpoint:
         embeddings = checkpoint["D_state"]["ent_embedding.weight"].numpy()
     else:
-        print("Discriminator weights not found, visualization skipped.")
         return
 
     indices = []
     metadata = []
     
-    print("Selecting entities for visualization...")
-    
     sorted_ids = sorted([int(k) for k in id_to_str.keys()])
-    
     step = max(1, len(sorted_ids) // MAX_NODES)
     
     for i in range(0, len(sorted_ids), step):
@@ -63,20 +56,17 @@ def create_interactive_map():
         metadata.append({"Name": display_name, "Type": e_type})
 
     if not indices:
-        print("No indices selected.")
         return
 
     selected_embeddings = embeddings[indices]
     
-    print("Running PCA...")
-    pca = PCA(n_components=2)
-    coords = pca.fit_transform(selected_embeddings)
+    tsne = TSNE(n_components=2, perplexity=40, n_iter=1000, random_state=42, init='pca', learning_rate='auto')
+    coords = tsne.fit_transform(selected_embeddings)
 
     df = pd.DataFrame(metadata)
     df["X"] = coords[:, 0]
     df["Y"] = coords[:, 1]
 
-    print("Generating Plotly map...")
     fig = px.scatter(
         df, x="X", y="Y", color="Type", hover_name="Name",
         template="plotly_dark",
@@ -90,9 +80,9 @@ def create_interactive_map():
         }
     )
 
-    fig.update_traces(marker=dict(size=6, opacity=0.8, line=dict(width=0.5, color='white')))
+    fig.update_traces(marker=dict(size=7, opacity=0.8, line=dict(width=0.5, color='white')))
+    fig.update_layout(xaxis_title="t-SNE Dimension 1", yaxis_title="t-SNE Dimension 2")
     fig.write_html(str(OUTPUT_HTML))
-    print(f"Interactive map generated: {OUTPUT_HTML}")
 
 if __name__ == "__main__":
     create_interactive_map()
