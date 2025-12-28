@@ -6,6 +6,7 @@ from pathlib import Path
 import os
 import sys
 from sklearn.manifold import TSNE
+from sklearn.preprocessing import normalize
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
@@ -58,9 +59,17 @@ def create_interactive_map():
     if not indices:
         return
 
-    selected_embeddings = embeddings[indices]
+    raw_embeddings = embeddings[indices]
+    selected_embeddings = normalize(raw_embeddings, norm='l2')
     
-    tsne = TSNE(n_components=2, perplexity=40, n_iter=1000, random_state=42, init='pca', learning_rate='auto')
+    tsne = TSNE(
+        n_components=2, 
+        perplexity=30,
+        n_iter=2000,
+        random_state=42, 
+        init='random',
+        learning_rate='auto'
+    )
     coords = tsne.fit_transform(selected_embeddings)
 
     df = pd.DataFrame(metadata)
@@ -70,6 +79,7 @@ def create_interactive_map():
     fig = px.scatter(
         df, x="X", y="Y", color="Type", hover_name="Name",
         template="plotly_dark",
+        title=f"Latent Space Manifold (t-SNE Projection - {len(df)} Nodes)",
         color_discrete_map={
             "Venue": "#00ffff",       
             "Author/Person": "#ff0000", 
